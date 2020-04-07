@@ -1,0 +1,37 @@
+***服务器日志查看***
+# 实时查看日志命令
+tail -f xxx.log
+# 实时监控100行日志
+tail -100f xxx.log
+# 查看最后10行日志
+tail -n 10 xxx.log
+# 查看前10行日志
+head -n 10 xxx.log
+***查看服务器进程****
+# 查看指定进程
+ps -ef|grep xxxxx
+ps aux|grep xxxxx
+# 删除指定进程
+kill -9 xxxx/id
+***查看端口***
+# 查看当前所有端口
+netstat -a
+# 查看端口是否占用
+netstat -anp|grep portid
+***文件内容操作***
+# 替换当前行第一个well为good
+:s/well/good
+# 替换当前行所有well为good
+:s/well/good/g
+# 查找关键字
+/xxxx  n
+?xxxx  n
+# 替换文本中所有内容
+:%s/well/good/g
+***文件操作***
+# 复制文件到指定目录
+cp -r srcfile newfile
+# 移动文件到指定目录
+mv srcfile newfile
+
+
